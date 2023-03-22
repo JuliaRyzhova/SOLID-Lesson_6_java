@@ -1,4 +1,3 @@
-import controller.Controller;
 import view.ConsoleView;
 
 public class Main {
