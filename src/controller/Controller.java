@@ -1,12 +1,21 @@
 package controller;
 
-import model.impl.User;
+import model.Report;
+import model.impl.Saver;
+import model.User;
 
 public class Controller {
-    public void saveUser(User user){
-        user.save();
+    private final Saver saver;
+
+    public Controller(Saver saver) {
+        this.saver = saver;
     }
-    public void saveReport(User user){
-        user.report();
+
+    public void save(User user) {
+        saver.save(user);
+    }
+
+    public void report(User user) {
+        Report.report(user);
     }
 }

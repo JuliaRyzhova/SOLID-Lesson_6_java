@@ -1,5 +1,5 @@
 package model;
 
-public interface Savable {
-    void save();
+public interface Savable<T> {
+    void save(T t);
 }
